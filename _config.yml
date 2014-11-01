@@ -1,0 +1,17 @@
+permalink: pretty
+relative_permalinks: true
+
+title: Just for the Record
+url: http://jftr.github.io
+BASE_PATH: http://jftr.github.io/
+encoding: utf-8
+timezone: Asia/Shanghai
+github: jftr
+highlighter: pygments
+paginate: 5
+
+pages_list:       
+  About: '/about'
+  Archive: '/archive'
+  Tags: '/tags'
+  Feed: '/atom.xml'

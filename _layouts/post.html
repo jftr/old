@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">{{ page.date | date:"%b %d, %Y" }}</span>
+  {{ content }}
+</div>
+
+<div class="rel-tags">
+  <h2>Tags: </h2>
+  {% if post %}
+    {% assign tags = post.tags %}
+  {% else %}
+    {% assign tags = page.tags %}
+  {% endif %}
+  {% for tag in tags %}
+    <a class="fa fa-chevron-circle-right" href="/tags/#{{tag|slugize}}">{{tag}}</a>
+    {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+</div>
